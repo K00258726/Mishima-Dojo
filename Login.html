@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="css/login.css">
+<link rel="shortcut icon" href="images/28287-1-tekken-logo-hd_64x64.ico">
+<head>
+  <script>
+    function validateForm() {
+      let x = document.forms["LOGIN"]["lon"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    </script>
+<title>Login</title>
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="Guides.html">Guides</a>
+  <div class="dropdown">
+    <button class="dropbtn">Profile 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Login.html">Login</a>
+      <a href="SignUp.html">Sign Up</a>
+    </div>
+  </div> 
+</div>
+
+  
+  <form action="action_page.php" method="post" name="LOGIN" onsubmit="return validateForm()">
+    
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" name="lon">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container">
+      <a href="Login.html">
+      <button type="button" class="cancelbtn">Cancel</button>
+      </a>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>    
+</body>
+</html>
